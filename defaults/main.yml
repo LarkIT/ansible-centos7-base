@@ -1,0 +1,5 @@
+# defaults/main.yml
+# Default params for CentOS 7 base role
+
+# Install VMware tools? 
+vmware: False

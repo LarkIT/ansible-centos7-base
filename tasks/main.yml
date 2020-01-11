@@ -1,0 +1,23 @@
+# tasks/main.yml
+# Base role for CentOS 7
+
+- name: Set hostname
+  hostname:
+    name: "{{ hostname }}"
+
+- name: Install base packages
+  yum:
+    name: ['bind-utils','net-tools','policycoreutils-python','tcpdump','telnet','wget','vim']
+
+- name: Install and start VMware tools
+  block:
+  - name: Install VMWare tools
+    yum: 
+      name: open-vm-tools
+  
+  - name: Start and enable VMWare tools
+    service:
+      name: vmtoolsd
+      state: started
+      enabled: yes
+  when: vmware
