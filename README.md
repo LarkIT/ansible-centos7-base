@@ -2,3 +2,6 @@
 
 ## Variables
 vmware: (boolean) whether or not to install, enable, and start VMware tools
+
+## Dependencies
+None
