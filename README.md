@@ -10,4 +10,7 @@ This role is known to work on the following operating systems:
 None
 
 ## Variables
-vmware: (boolean) whether or not to install, enable, and start VMware tools
+| Variable | Required? | Default Value | Type | Description |
+|----------|--------|-------|------|--------|
+| hostname | Required | - | String | The machine's hostname will be set to this value |
+| vmware | Optional | False | Boolean | Whether or not to install VMware tools, enable when virtualized on top of VMware |
