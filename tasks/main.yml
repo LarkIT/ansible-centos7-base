@@ -7,7 +7,15 @@
 
 - name: Install base packages
   yum:
-    name: ['bind-utils','net-tools','policycoreutils-python','tcpdump','telnet','wget','vim']
+    name: 
+     - bind-utils
+     - epel-release
+     - net-tools
+     - policycoreutils-python
+     - tcpdump
+     - telnet
+     - wget
+     - vim
 
 - name: Install and start VMware tools
   block:
