@@ -17,6 +17,18 @@
      - wget
      - vim
 
+- name: Ensure firewalld is installed
+  yum:
+    name: 
+    - firewalld
+
+- name: Ensure firewalld enamed and started
+  service:
+    name: firewalld
+    state: started
+    enabled: true
+   
+
 - name: Install and start VMware tools
   block:
   - name: Install VMWare tools
@@ -27,5 +39,5 @@
     service:
       name: vmtoolsd
       state: started
-      enabled: yes
+      enabled: true
   when: vmware
