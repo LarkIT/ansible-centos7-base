@@ -1,0 +1,7 @@
+---
+# handlers/main.yml
+# handlers file for ansible-linux-base
+- name: reastart openvpnas
+  service:
+    name: openvpnas
+    state: restarted
