@@ -5,6 +5,13 @@
   hostname:
     name: "{{ hostname }}"
 
+- name: Gather package facts
+  package_facts:
+    manager: auto
+
+- debug: 
+    var: ansible_facts.packages
+
 - name: Install base packages
   yum:
     name: 
@@ -27,7 +34,6 @@
     name: firewalld
     state: started
     enabled: true
-   
 
 - name: Install and start VMware tools
   block:
