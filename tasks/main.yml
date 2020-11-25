@@ -1,9 +1,13 @@
 # tasks/main.yml
 # Base role for CentOS 7
 
+
+
 - name: Set hostname
-  hostname:
-    name: "{{ hostname }}"
+  shell: hostnamectl set-hostname "{{ hostname }}"
+
+#   hostname:
+#     name: "{{ hostname }}"
 
 # - name: Gather package facts
 #   package_facts:
